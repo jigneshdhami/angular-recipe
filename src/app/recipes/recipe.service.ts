@@ -34,6 +34,10 @@ export class RecipeService {
     return this.recipes.slice(); // only get the copy instead ref
   }
 
+  getRecipe(idex: number) {
+    return this.recipes[idex];
+  }
+
   addIngredientToShoppingList(ingredients: Ingredient[]){
     this.slService.addIngredients(ingredients)
   }
