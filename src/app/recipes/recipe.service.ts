@@ -31,6 +31,11 @@ export class RecipeService {
   constructor(private slService: ShoppingListService) {
   }
 
+  setRecipes(recipes: Recipe[]) {
+    this.recipes=recipes ;
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
   getRecipes() {
     return this.recipes.slice(); // only get the copy instead ref
   }
@@ -53,7 +58,7 @@ export class RecipeService {
     this.recipesChanged.next(this.recipes.slice());
   }
 
-  deleterecipe(index: number){
+  deleteRecipe(index: number){
     this.recipes.splice(index, 1);
     this.recipesChanged.next(this.recipes.slice());
   }
