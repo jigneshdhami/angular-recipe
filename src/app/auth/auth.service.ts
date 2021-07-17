@@ -103,7 +103,8 @@ export class AuthService {
     this.router.navigate(['/auth']);
     localStorage.removeItem('userData');
 
-    if (this.tokenExpirationTimer) {  ``
+    if (this.tokenExpirationTimer) {
+      ``
       clearTimeout(this.tokenExpirationTimer);
     }
 

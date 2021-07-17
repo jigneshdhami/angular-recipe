@@ -16,8 +16,8 @@ export class RecipeResolverService implements Resolve<Recipe> {
     : Observable<Recipe> | Promise<Recipe> | Recipe {
     // const recipes = this.recipeService.getRecipes();
     // if (recipes.length === 0) {
-      // @ts-ignore
-      return this.dataStorageService.fetchRecipes();
+    // @ts-ignore
+    return this.dataStorageService.fetchRecipes();
     // } else {
     //   return recipes;
     // }
